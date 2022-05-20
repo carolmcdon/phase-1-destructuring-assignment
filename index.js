@@ -1,6 +1,24 @@
 const farmAnimals = 'cow horse sheep pig chicken';
 
+const farmAnimals2 = farmAnimals.split(' ');
+const [moo, neigh, baa, oink, cluck] = farmAnimals2
+console.log(farmAnimals2)
+
+let [bessie, ,dolly, babe, little] = farmAnimals2
+console.log(bessie, dolly, babe, little);
+
+let [blackAndWhite, ,black, pink, ,] = farmAnimals2
+console.log(blackAndWhite, black, pink);
+
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const [red, orange, yellow, green, blue, indigo, violet] = colors
+console.log(red, orange, yellow, green, blue, indigo, violet)
+
+const [r, o, y, g, b, ,v] = colors
+console.log(r, o, y, g, b, v)
+
+const [ , , , , , indg,] = colors
+console.log(indg)
 
 const muppet = {
   muppetName: 'Miss Piggy',
@@ -9,6 +27,8 @@ const muppet = {
   job: 'Cast member of The Muppet Show',
   partner: 'Kermit'
 };
+
+const { muppetName, color, song, job, partner } = muppet;
 
 const nestedMuppet = {
   nestedName: 'Kermit',
@@ -24,6 +44,11 @@ const nestedMuppet = {
   nestedJob: 'Host of The Muppet Show',
   nestedPartner: 'Miss Piggy'
 };
+
+// 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
+
+const { song2, song4 } = nestedMuppet.album.theMuppetMovie;
+const { nestedJob, nestedPartner } = nestedMuppet;
 
 // Strings
 
